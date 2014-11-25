@@ -1,0 +1,41 @@
+---
+abstract: 'Check or edit configuration data with Config::Model'
+author:
+  - 'Dominique Dumont'
+build_requires:
+  File::Path: '0'
+  Module::Build: '0.34'
+  Probe::Perl: '0'
+  Test::Command: '0.08'
+  Test::File::Contents: '0'
+  Test::More: '0'
+configure_requires:
+  Module::Build: '0.34'
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.020, CPAN::Meta::Converter version 2.142690'
+license: lgpl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: '1.4'
+name: App-Cme
+recommends:
+  Config::Model::CursesUI: '0'
+  Tk: '0'
+requires:
+  App::Cmd::Setup: '0'
+  Config::Model: '2.062'
+  Config::Model::FuseUI: '0'
+  Config::Model::Lister: '0'
+  Config::Model::ObjTreeScanner: '0'
+  Config::Model::SimpleUI: '0'
+  Config::Model::TermUI: '0'
+  Config::Model::Utils::GenClassPod: '0'
+  Path::Tiny: '0'
+  Pod::POM: '0'
+  Scalar::Util: '0'
+  perl: '5.010'
+resources:
+  bugtracker: http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-Cme
+  homepage: https://github.com/dod38fr/app-cme
+  repository: git://github.com/dod38fr/app-cme.git
+version: '0.001'

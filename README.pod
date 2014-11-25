@@ -1,0 +1,46 @@
+=head1 cme - Check or edit configuration data
+
+cme provides a command to check or edit configuration data with L<Config::Model>.
+
+L<cme> user interface can be:
+
+=over
+
+=item *
+
+Graphical if L<Config::Model::TkUI> is installed.
+
+=item *
+
+a shell-like interface (plain or based on L<Term::ReadLine>).
+
+=item *
+
+based on curses if L<Config::Model::CursesUI> is installed.
+
+=back
+
+By default, C<cme edit> will try to launch a GUI.
+
+
+
+=head2 More information
+
+See
+
+=over
+
+=item *
+
+L<cme> man page
+
+=item *
+
+L<config-model wiki|https://github.com/dod38fr/config-model/wiki> (i.e. the wiki tab above)
+
+=item *
+
+L<http://ddumont.wordpress.com/> 
+
+=back
+
