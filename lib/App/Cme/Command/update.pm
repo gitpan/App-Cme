@@ -10,7 +10,7 @@
 # ABSTRACT: Update the configuration of an application
 
 package App::Cme::Command::update ;
-$App::Cme::Command::update::VERSION = '0.001';
+$App::Cme::Command::update::VERSION = '1.001';
 use strict;
 use warnings;
 use 5.10.1;
@@ -52,17 +52,24 @@ sub execute {
     my ($model, $inst, $root) = $self->init_cme($opt,$args);
 
     say "update data" unless $opt->{quiet};
+    my @msg ;
     my $hook = sub {
         my ($scanner, $data_ref,$node,@element_list) = @_;
-        $node->update() if $node->can('update') ;
+        push (@msg, $node->update()) if $node->can('update') ;
     };
 
     Config::Model::ObjTreeScanner->new(
         node_content_hook => $hook,
         leaf_cb => sub { }
-    )->scan_node( undef, $root );
+    )->scan_node( \@msg, $root );
 
-    say "update done" unless $opt->{quiet};
+    if (@msg and not $opt->{quiet}) {
+        say "update done";
+        say join("\n", grep {defined $_} @msg );
+    }
+    elsif (not $opt->{quiet}) {
+        say "command done, but model has no provision for update";
+    }
 
     $self->save($inst,$opt) ;
 }
@@ -81,7 +88,7 @@ App::Cme::Command::update - Update the configuration of an application
 
 =head1 VERSION
 
-version 0.001
+version 1.001
 
 =head1 SYNOPSIS
 

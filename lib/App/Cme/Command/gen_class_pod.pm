@@ -10,13 +10,18 @@
 # ABSTRACT: Generates pod doc from model files
 
 package App::Cme::Command::gen_class_pod ;
-$App::Cme::Command::gen_class_pod::VERSION = '0.001';
+$App::Cme::Command::gen_class_pod::VERSION = '1.001';
 use strict;
 use warnings;
 use 5.10.1;
 
 use App::Cme -command ;
 use Config::Model::Utils::GenClassPod;
+
+sub command_names {
+    my $self = shift ;
+    return ( 'gen-class-pod' , $self->SUPER::command_names );
+}
 
 sub description {
     return << "EOD"
@@ -43,7 +48,7 @@ App::Cme::Command::gen_class_pod - Generates pod doc from model files
 
 =head1 VERSION
 
-version 0.001
+version 1.001
 
 =head1 SYNOPSIS
 

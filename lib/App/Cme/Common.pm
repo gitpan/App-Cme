@@ -10,12 +10,12 @@
 #ABSTRACT: Common methods for App::Cme
 
 package App::Cme::Common;
-$App::Cme::Common::VERSION = '0.001';
+$App::Cme::Common::VERSION = '1.001';
 use strict;
 use warnings;
 use 5.10.1;
 
-use Config::Model 2.062;
+use Config::Model 2.063;
 use Config::Model::Lister;
 use Pod::POM;
 use Scalar::Util qw/blessed/;
@@ -175,7 +175,7 @@ App::Cme::Common - Common methods for App::Cme
 
 =head1 VERSION
 
-version 0.001
+version 1.001
 
 =head1 SYNOPSIS
 

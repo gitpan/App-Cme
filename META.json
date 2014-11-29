@@ -31,7 +31,7 @@
          },
          "requires" : {
             "App::Cmd::Setup" : "0",
-            "Config::Model" : "2.062",
+            "Config::Model" : "2.063",
             "Config::Model::FuseUI" : "0",
             "Config::Model::Lister" : "0",
             "Config::Model::ObjTreeScanner" : "0",
@@ -67,6 +67,6 @@
          "web" : "http://github.com/dod38fr/app-cme"
       }
    },
-   "version" : "0.001"
+   "version" : "1.001"
 }
 
